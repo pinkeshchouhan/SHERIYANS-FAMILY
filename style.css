@@ -1,0 +1,480 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family:'montserrat';
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.nav{
+    height:150px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    position: fixed;
+    align-items: center;
+    padding: 0 150px;
+    gap:50px;
+    justify-content: flex-start;
+    z-index: 99;/* jo niche he vo upper aajayega*/
+}
+
+.cursor{
+    height:30px;
+    width:30px;
+    background-color:#befd12b9;
+    border-radius: 50%;
+    position: fixed;
+    z-index:99;
+}
+
+.cursorblur{
+    height:300px;
+    width:300px;
+    background-color: #96c11e98;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(80px);
+    z-index:9;
+}
+
+.nav img{
+    height:75px;
+}
+
+.nav h4{
+    text-transform: uppercase;
+    font-weight:700;
+}
+
+video{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+.main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.151);
+}
+
+.page1{
+    width:100%;
+    height:100vh;
+    /* background-color: red; */
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+    z-index: 10;
+    text-align: center; /* isko dene se text align center matlab text bikhrega nahi or line me aajayega */
+}
+
+.page1 h1{
+    font-size:120px;
+    font-weight: 900;
+    position: relative;
+     
+}
+
+.page1 .arrow{
+   height: 200px;
+   width: 200px;
+   border: 2px solid #95c11e;
+   /* background-color: #12cc12; */
+   position:absolute;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   left:-2%;
+   bottom:-0%;
+   transition: all ease 0.85s;
+}
+
+.page1 .arrow i{
+    font-size: 50px;
+    font-weight: 200;
+}
+
+.page1 .arrow:hover{
+    scale: 0.4;
+    background-color: #95c11e;
+}
+
+
+
+.page1 h1::before{
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: black;
+    top:-4px;
+    left:-6px;
+    -webkit-text-stroke: 1px #95c11e;
+    z-index: -1;
+}
+
+
+.page1 h2{
+    font-size:28px;
+    font-weight:800;
+
+}
+
+.page1 p{
+    font-size:15px;
+    font-weight:900;
+    width:22%;
+    margin-top:10px;
+    margin-bottom:5px;
+
+}
+
+.page2{
+    min-height:100vh;
+    width:100%;
+    z-index:10;
+    
+}
+
+
+.scroller{
+    /* background:red; */
+    white-space: nowrap;   /* scroller ka code  pure scroller ka width yha pr nahi dena he*/
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index:10;
+}
+
+.scroller::-webkit-scrollbar{
+    display:none;
+}
+
+.scrollerin{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name:scroll;
+    animation-duration:30s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+}
+
+.scrollerin{
+    display:inline-block;
+    white-space: nowrap;
+}
+
+.scroller h4{
+    display:inline-block;
+    font-size: 140px;
+    font-weight: 800;
+    font-style: italic;
+    margin-right: 10px;
+    color:transparent;
+    -webkit-text-stroke: 2px rgb(0, 255, 166);
+    transition: all linear 0.5s;
+}
+
+.scroller h4:hover{
+    color: rgb(30, 209, 17);
+
+}
+
+@keyframes scroll{
+
+    from{
+        transform:translate(0);
+
+    }
+
+    to{
+        transform:translateX(-100%);
+    }
+
+}
+
+.aboutus{
+    height:40vh;
+    width:100%;
+    /* background-color: aqua; */
+    display:flex;
+    padding: 0 50px;
+    z-index:10;
+    position: relative;
+    align-items: center;
+    justify-content:space-around;
+    
+}
+
+.aboutus img{
+    height: 220px;
+    width: 220px;
+    border-radius:20px;
+    object-fit: cover;
+}
+
+.aboutusin{
+    width:50%;
+    text-align: center;
+    /* background-color: #95c11e; */
+
+}
+
+.aboutusin h3{
+    font-size:55px;
+    font-weight:900;
+    margin-bottom:40px;
+
+}
+
+.aboutusin p{
+    font-size: 20px;
+    line-height:26px;
+}
+
+.card-container{
+    /* background-color: red; */
+    height:60vh;
+    display: flex;
+    align-items: center; 
+    justify-content: space-evenly;
+    justify-content: center;
+    gap:50px;
+    z-index:10;
+    position: relative;
+    
+}
+
+.card{
+    height:80%;
+    width:23%;
+    /* background-color: rgb(191, 191, 225); */
+    border-radius: 15px;
+    background-size:cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 1s;    
+}
+
+#card1{
+    background-image:url(./Assests/11.JPG);
+    display: block;
+
+}
+
+#card2{
+    background-image:url(./Assests/1111.webp);
+
+}
+#card3{
+    background-image:url(./Assests/111.JPG);
+
+}
+
+.overlay{
+    width:100%;
+    height:100%;
+    /* background-color: #95c11e; */
+    padding-top:130px;
+    padding-left:30px; 
+    opacity:0;
+    transition: all ease 1s;
+}
+
+ :hover.overlay{
+    opacity: 1;
+}
+
+.overlay h4{
+    color: black;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom:20px;
+
+}
+
+.overlay p{
+    color:black ;
+
+}
+
+.green-div{
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left bottom, #12cc12 ,#95c11e);
+
+}
+
+.green-div h4{
+    width:50%;
+    font-size:23px;
+    text-transform: uppercase;
+    line-height: 33px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+}
+
+.green-div img{
+    height: 100%;
+    object-fit: cover;
+    width:14%;
+
+}
+
+.page3{
+    height:100vh;
+    width:100%;
+    /* background-color: goldenrod; */
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    position: relative;   
+}
+
+.page3>p{
+    font-size:35px;
+    font-weight: 700;
+    width:60%;
+    text-align: center;
+    line-height:45px;
+}
+
+.page3 img{
+    position:absolute;
+    height:60px;
+}
+
+.page3 #colon1{
+    left:20%;
+    top:25%;
+}
+
+.page3 #colon2{
+    right:18%;
+    bottom:25%;
+}
+
+.page4{
+    height:50vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position:relative;
+}
+
+.elem{
+    height:45%;
+    width:20%;
+    overflow: hidden;
+    border-radius:20px;
+    position: relative;
+       
+}
+
+.elem h2{
+    height:100%;
+    width:100%;
+    background-color: #12cc12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-weight:900;
+    position: absolute; 
+    z-index:10;
+    transition: ease 0.80s;   
+}
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+    scale: 1.1;
+    
+}
+
+.elem:hover h2{
+    color: white;
+    background: transparent;
+}
+
+.elem:hover img{
+    scale: 1;
+}
+
+.page4 h1{
+    font-size:120px;
+    position: absolute;
+    top:0.3px;
+    font-weight: 900;
+    font-family:gilroy;
+    color: #000;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+       
+}
+
+.footer{
+    height: 50vh;
+    width: 100%;
+    background: linear-gradient(to left bottom, #029302 ,#cff174);
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
